@@ -1,0 +1,6 @@
+//to install nodemon only within project
+npm install nodemon --save-dev
+
+//to install nodemon globally
+npm install nodemon -g
+

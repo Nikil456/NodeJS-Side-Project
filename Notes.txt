@@ -4,3 +4,8 @@ npm install nodemon --save-dev
 //to install nodemon globally
 npm install nodemon -g
 
+//express
+npm install --save express
+
+//body parser
+npm install --save body-parser 

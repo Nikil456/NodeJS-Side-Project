@@ -9,3 +9,6 @@ npm install --save express
 
 //body parser
 npm install --save body-parser 
+
+//node modules folder - do this everytime it's missing
+npm install

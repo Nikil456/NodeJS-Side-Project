@@ -10,14 +10,31 @@
 
 // module.exports = pool.promise();
 
-require('dotenv').config();
+// require('dotenv').config();
 
-const Sequelize = require('sequelize');
+const mongodb = require('mongodb');
+const MongoClient = mongodb.MongoClient;
 
-const sequelize = new Sequelize('node-project-database', process.env.DB_USER, process.env.DB_PASSWORD, {
-    dialect: 'mysql',
-    host: 'localhost',
-    port: 3306
-});
+let _db; 
 
-module.exports = sequelize;
+const mongoConnect = (callback) => {
+    MongoClient.connect('mongodb+srv://kandalanikil:AfemlUlwvAybOAin@cluster0.s3y3s.mongodb.net/shop?retryWrites=true')
+    .then(client => {
+        console.log('Connected');
+        _db = client.db();
+        callback(client);
+    })
+    .catch(err => {
+        console.log(err);
+        throw err;
+    });
+};
+
+const getDb = () => {
+    if (_db) {
+        return _db;
+    }
+}
+
+exports.mongoConnect = mongoConnect;
+exports.getDb = getDb;

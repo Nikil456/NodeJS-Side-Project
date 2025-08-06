@@ -1,5 +1,5 @@
 # Node.js Side Project
-Following this udemy course with my own changes to learn more about building server side web applications with Node.js and database solutions like MongoDB. Currently in progress and not deployed.
+Following a udemy course with my own changes to learn more about building server side web applications with Node.js and database solutions like MongoDB. Currently in progress and not deployed.
 - Udemy Course: https://www.udemy.com/course/nodejs-the-complete-guide/?couponCode=MT300725B
 ## Requirements
 - Node.js
